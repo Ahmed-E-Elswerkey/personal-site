@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ahmed Elswerkey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='icon' href='icon.png'>
+    <link rel="stylesheet" href="./index.css">
+    <style></style> 
+</head>
+<body>
+
+    <div id="intro">
+        <div id="navbar">
+            <div id="logo"><a href="#">Elswerky</a>
+        </div>
+    </div>
+    <div id="port">
+        <img src="./imgs/me.jpg" alt="">
+    </div>
+    <div id="content">
+        <div>
+            <p id='infos'>Hi there, <br>I'm Ahmed Elswerkey, <br>A web developer <small style="font-family:monospace;">(React JS)</small></p>
+            <div id="skills">
+                <div class="skilld">HTML</div>
+                <div class="skilld">CSS</div>
+                <div  class="skilld">Javascript</div>
+                <div  class="skilld">React</div>
+                <div  class="skilld">Firebase</div>
+            </div>
+    
+            <div id='skills_2'>
+                <div id='front'>Front-End</div>
+                <div id='back'>Back-End</div>
+                <div id='PSDCode'>PSD 2 Code</div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<!--<div id="other_skills">
+            <div class="o_s" title='Perfect-final result'><div>Prefect result</div></div>
+            <div class="o_s" title='Fast learner'><div></div></div>
+            <div class="o_s" title='Goal is for the greater good'><div></div></div>
+            <div class="o_s" title='Flixbility'><div></div></div>
+        </div>-->
+    <!--------------Intro end!---------->
+
+    <div id='hire_me'>
+        <!-- Proejcts you requested -->
+        <!-- <img src="imgs/have_an_idea_2.gif" style='width:30%;' alt=""> -->
+       <div>
+        <div style="float:left;width:50%;display:flex;justify-content:center;flex-flow:column;height:100%;">
+            <p>Start building your project now!</p>
+            <button  id='demo_button' onclick="toggle('demo_form')">Hire me</button>
+        </div>
+        <div style="float:right;width:50%;display:inline-block;overflow: hidden;">
+            <img src="./imgs/tag.png" style='width:50vw;' alt="">
+        </div>
+    </div>
+        <div id='demo_form' style='display:none'>
+            <div>
+                <form style='padding:1.5%' id="demo_div" action='./funcs.php?t=demo-form' method='post'>
+                    <h3>Your idea to real web application</h3>
+               
+                 <fieldset style='border: 1px solid #6471d4;padding: 0.5rem 3.4rem;'>
+                    <legend style='margin:5%;margin-left: -23%;font-size: 1.2rem;color: #6471d4;'>App info</legend>
+                    <select onchange='others(this)' name="type" required>    
+                        <option selected>Select type...</option>
+                        <option value="game">Game</option>
+                        <option value="programe">Programe</option>
+                        <option value="other">Other</option>
+                    </select>
+<br>
+                    <fieldset id='other' style='display:none !important;'>
+                        <legend>Custom app type</legend>
+                        <input type='text' name='other'  placeholder='personal'>
+                    </fieldset>
+<br>
+                    <fieldset>
+                        <legend>App name</legend>
+                        <input type="text" name='app_name' placeholder='Millo' required>
+                    </fieldset>  
+<br>
+                    <fieldset>
+                        <legend>App's descrition</legend>
+                        <textarea name='description' placeholder='It will do this and that..' style="height:5rem;" required></textarea>
+                    </fieldset>
+                </fieldset>
+<br>
+                    <input type="submit" name='submit' value='Done'>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects">
+        <div id='projects_con'></div>
+    </div>
+        
+
+    <div id="messages">
+       
+    </div>
+
+    <div id="footer">
+
+    </div>
+     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+    <!-- Hotjar Tracking Code for ahmedemad.net -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:910394,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyC2Grf_nUEzFHnA5vHgWgOuOcLYQo9woJI",
+            authDomain: "elswer-key.firebaseapp.com",
+            databaseURL: "https://elswer-key.firebaseio.com",
+            projectId: "elswer-key",
+            storageBucket: "",
+            messagingSenderId: "18731321311",
+            appId: "1:18731321311:web:5612be3e0b4005ab"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="index.js"></script>
+</body>
+</html>

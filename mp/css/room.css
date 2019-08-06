@@ -1,0 +1,185 @@
+body{
+	overflow: hidden;
+}
+#container{
+	height:100%;
+	position: relative;
+}
+#back{
+	position: absolute;
+}
+	#back a img{
+		width:5rem;
+	}
+#user-name {
+	padding:0.8rem;
+	margin-bottom:3%;
+	-webkit-clip-path: polygon(100% 10%, 0 27%, 0 69%, 100% 92%);
+    clip-path: polygon(100% 10%, 0 27%, 0 69%, 100% 92%);
+}
+
+#messages{
+	height:70%;
+	overflow:auto;
+	overflow-x:hidden;
+}
+.message{
+	width:80%;
+	display:inline-block;
+	position: relative;
+	margin:2% 
+}
+	.to{
+	    margin-right: -2% !important;
+	}
+	.from{
+		margin-left:-2% !important;
+	}
+.message a{
+	text-decoration: none;
+	font-size: 1.5rem !important;
+}
+.from .song a:after{
+	content:'\f144';
+	font-family: "Font Awesome 5 Free"; 
+	font-size: 1.5rem;
+    vertical-align: middle;
+    margin-left:0.1rem;
+    font-weight: bold;
+}
+.to .song a:before{
+	content:'\f144';
+	font-family: "Font Awesome 5 Free"; 
+	font-size: 1.5rem;
+    vertical-align: middle;
+    margin-right:0.1rem;
+    font-weight: bold;
+}
+.message .title{
+	margin: auto;
+	padding:1rem;
+}
+.from a.title{
+    -webkit-clip-path: polygon(100% 10%, 0 27%, 0 69%, 100% 92%);
+    clip-path: polygon(100% 10%, 0 27%, 0 69%, 100% 92%);
+}
+
+.song,.options {
+    display: inline-block;
+    height: inherit;
+    vertical-align: middle;
+}
+.options{
+	color: white;
+}
+	.op-icon:hover{
+		cursor: pointer;
+	}
+	.menu{
+		display:none;
+	    background: #cdcdcd;
+    	height: 1rem;
+    	position: absolute;
+    	top: 100%;
+    	left: 40%;
+	}
+	.menu button{
+		border:0;
+		border-radius: 50%;
+		background: white;
+		padding:0.2rem;
+		width: 2rem;
+		height: 2rem;
+		text-align: center;
+		text-align: -webkit-center;
+	}
+	.menu button i{
+		font-size: 1.2rem !important;
+		margin: auto;
+	}
+.options .menu button:nth-of-type(3) i:after{
+	content:'\f055';
+	font-family: 'Font Awesome 5 free';
+	margin-left:-25%;
+	margin-bottom:-25%;
+	font-size: 0.6rem;
+	border:1px solid white;
+	border-radius:50%;
+}
+#message{
+    background: #cdcdce;
+	padding:0.5rem;
+	margin:auto;
+	border-radius:3px;
+	width:80%;
+}
+
+#message input{
+    padding: 0.3rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    background: #cdcdce;
+    border: 0;
+    width:90%;
+    font-size: 1.2rem !important;
+}
+
+#message button{
+	vertical-align: sub;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 50%;
+    background: #3a6cbf;
+    color: #cdcdce;
+}
+@media screen and (max-width:650px){
+	#back a img{
+		width:3rem;
+	}
+	.message{
+		width: auto;
+		margin:5%;
+	}
+	.message a{
+		word-break: break-word;
+	}
+	.message .title{
+		padding:0.5rem;
+		display: flex;
+		justify-content: space-between;
+	}
+	.message .menu button{
+		width:1.5rem;
+		height:1.5rem;
+	}
+	.message .menu button i{
+		font-size:1rem !important;
+	}
+	#message input{
+		width:80%;
+	}
+	#message button{
+		max-width: 12%;
+		padding:2%;
+	}
+}
+@media screen and (max-width:400px){
+	#container{
+		width:97% !important;
+	}
+	.message a{
+		font-size: 0.8rem !important;
+		font-weight: bold;
+	}
+}
+@media screen and (max-height:400px){
+	#messages{
+		height:56%;
+	}
+	#message{
+		padding:0.35rem;
+	}
+	#message input{
+		padding:0.2rem;
+	}
+}

@@ -1,0 +1,134 @@
+
+#sign_up{
+	display:none !important;
+}
+
+@keyframes h_s{
+	0%{
+		opacity:0;
+	}
+	95%{
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+	}
+}
+
+#sign{
+	display:inline-block;
+	animation:h_s 3.5s ease-out 1;
+	width:17rem;
+	text-align: center;
+}
+#sign form{
+	display:inline-block;
+	margin:10% 0;
+	text-align:center;
+	width: 90%;
+}
+#sign label,#sign input{
+	display: inline-block;
+}
+#sign label{
+	text-align:left;
+	color:white;
+	width:100%;
+    padding: 0.2rem 0.07rem;
+}
+#sign input{
+	background:white;
+	border:0;
+	border-radius:4px;
+	padding:0.3rem;
+	margin-bottom:7%;
+	width:95%;
+	font-family:arial,serif;
+}
+#sign input[type='checkbox'],#sign label[for='terms']{
+	display:inline-block;
+	width:auto;
+}
+#sign label[for='terms']{
+	vertical-align: text-bottom;
+}
+
+#sign #line{
+	display:block;
+	width:50%;
+	border-bottom:3px solid white;
+	margin:4% auto 3%;
+}
+
+#sign input[type='submit'],#buttons a{
+	display:inline-block;
+	width:37%;
+	font-family:bank gothic;
+	border:0;
+	border-radius:3px;
+	background:rgba(255,255,255,0.2);
+	color:white;
+	padding:0.3rem 0.8rem;
+	text-decoration: none;
+}
+
+
+#buttons{
+	margin-top:8%;
+}
+#buttons input{
+	float:left;
+}
+#buttons a{
+	float:right;
+}
+
+
+@media screen and (max-width:1000px){
+
+	@keyframes loading2{
+		0%{
+			width:95%;
+			opacity:0;
+		    border: 0;
+    		margin-top: 36%;
+		}
+		20%{
+			width:95%;
+			opacity:1;
+		    border: 0;
+    		margin-top: 36%;
+		}
+		40%{
+			width:95%;
+			opacity:0;
+		    border: 0;
+    		margin-top: 36%;
+		}
+		60%{
+			width:95%;
+			opacity:1;
+		    border: 0;
+    		margin-top: 36%;
+		}
+		80%{
+			width:95%;
+			opacity:0;
+			border: 0;
+    		margin-top: 36%;
+		}
+		
+		100%{
+			width:17rem;
+			opacity:1;
+			border-bottom:2px solid white;
+    		margin-top: 4%;
+		}
+	}
+	#navbar img{
+		animation:loading2 3.5s ease-out 1;
+	}
+
+	
+
+}

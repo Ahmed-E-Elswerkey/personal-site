@@ -1,0 +1,141 @@
+*{
+	transition: 0.3s;
+}
+#container{
+	color:white;
+}
+
+.slide-down{
+	display:none !important;
+}
+.sl-do-bu{
+	font-size: 1.5rem !important;
+    margin: 2% auto;
+}
+@keyframes slide_down{
+	0%{
+		transform: scaleY(0);
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+		transform: scaleY(1);
+	}
+}
+li div:nth-of-type(2){
+	display:block;
+	animation:slide_down 0.4s ease-out 1;
+	overflow: hidden;
+	transform-origin: top;
+}
+.sl-do-bu:hover{
+	cursor: pointer;
+}
+
+#sidbar a:nth-of-type(4):after{
+	visibility: visible;
+}
+p img{
+	vertical-align: middle;
+	width:1.6rem;
+}
+	
+.link{
+	text-decoration: none;
+	color: #3f83f3;
+}
+
+#setting{
+	/*text-align:left;*/
+}
+ul{
+	text-align: center;
+}
+ul li{
+	padding-left:1.5%;
+    list-style: none;
+    margin: 3% auto;
+    text-align: left;
+}
+ul li div{
+    width: 23rem;
+    margin: auto;
+    text-align: left;
+    position: relative;
+}
+li > div:first-child:before {
+        content: '';
+	    display: block;
+	    height: 6px;
+	    width: 6px;
+	    border-radius: 1px;
+	    background: white;
+	    position: absolute;
+	    top: 0.7rem;
+	    left: -1.5rem;
+}
+li > div#delete:first-child:before{
+	background:#d32f30;
+}
+ul li h2{
+	margin-bottom:1.5%;
+}
+.div_head{
+	min-width: 65%;
+    font-size: 1.1rem !important;
+}
+.div_head:not(:first-child){
+    margin: 3% 0 2%;
+}
+.div_head:after ,.sl-do-bu:after{
+    content: '';
+    display: block;
+    width: 70%;
+    height: 1px;
+    background: linear-gradient(to right,#ffffffcc,#ffffff0d);
+}
+li #delete .div_head{
+	color:#d32f30;
+}
+li #delete .div_head:after{
+	background:linear-gradient(to right,#d32f30,#d32f3036);
+}
+ul li div label{
+	display: block;
+	color:#d2d2d2;
+}
+ul li div input{
+	width:60%;
+	background: #d2d2d2;
+	border: 0;
+	border-radius: 2px;
+	padding: 0.15rem;
+	margin-bottom: 1.5%;
+}
+ul li div input[type='submit']{
+	width: auto;
+    padding: 0.2rem;
+    border: 0;
+    border-radius: 3px;
+}
+ul li div input.cancel{
+	background: transparent;
+	color: white;
+}
+
+#about-us pre{
+	background: #d2d2d2;
+	padding:0.2rem;
+	border: 0;
+	border-radius: 3px;
+	color:#2b2b2b;
+}
+
+#invite h1{
+	font-weight: thin;
+	margin:4% 0;
+}
+#invite h1 span{
+	font-size: 0.9rem !important;
+	color: #d2d2d2;
+}
