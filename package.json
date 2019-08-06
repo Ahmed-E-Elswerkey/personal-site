@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My personal website that shows skills and past projects",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahmed-E-Elswerkey/personal-site.git"
+  },
+  "keywords": [
+    "portfolio",
+    "Elswerkey",
+    "elswerkey",
+    "elswerky",
+    "swerky",
+    "personal",
+    "site"
+  ],
+  "author": "Ahmed Elswerky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ahmed-E-Elswerkey/personal-site/issues"
+  },
+  "homepage": "https://github.com/Ahmed-E-Elswerkey/personal-site#readme"
+}
