@@ -54,10 +54,10 @@ window.onload = function(){
             document.getElementById('projects_con').innerHTML += `\
                 <div class='project' style='background-size:cover;'>\
                     <div><img src='./uploads/${d.id}.jpg'>
-                        <p class='info'>`+d.data().info+`</p>\
+                        <p class='info'>${d.data().info}</p>\
                     </div>\
                     <div class='' style='background-size:cover;'>\
-                        <a href='"+d.data().link+"'>`+d.id+`</a>\
+                        <a href='${d.data().link}'>${d.id}</a>\
                         <div>${d.data().tags}</div>\
                     </div>\
                 </div>`
