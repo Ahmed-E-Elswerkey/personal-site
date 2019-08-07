@@ -440,7 +440,6 @@ display:inline-block;
     margin-bottom: 2.5vw;
     border-radius:7px;
     box-shadow:1px 1px 5px 1px rgba(0,0,0,0.5);
-    font-family: 'bahns','Times New Roman', Times, serif;
 }
 .project > div:nth-child(1){
     width:100%;
@@ -453,7 +452,7 @@ display:inline-block;
 }
 .project div{
     margin:0.1rem 0;
-    font-family:'bahnns','Times New Roman', Times, serif;
+    font-family:'bahns','Times New Roman', Times, serif;
 }
 
 .project p{
