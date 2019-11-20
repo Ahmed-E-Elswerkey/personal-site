@@ -6,7 +6,7 @@ function $(s){
 function toggle(s){
     // xml_request("demo-form","demo_form");
     if($(s).style.display == "none"){
-        $(s).style.display = "block";
+        $(s).style.display = "flex";
         document.body.style.overflow="hidden";
         S = s;
     }
@@ -53,7 +53,7 @@ window.onload = function(){
             console.log('asd')
             document.getElementById('projects_con').innerHTML += `\
                 <div class='project' style='background-size:cover;'>\
-                    <div><img src='./uploads/${d.id}.jpg'>
+                    <div><img src='./uploads/${d.id}.jpg' alt='${d.id}'>
                         <p class='info'>${d.data().info}</p>\
                     </div>\
                     <div class='' style='background-size:cover;'>\
@@ -113,6 +113,14 @@ function projects_con(ol){
 }
 
 
-function proj(){
-    
-} 
+
+function sendMessage(e){
+    firebase.firestore().collection('messages').add({
+        'title':e.children[0].value,
+        'message':e.children[1].value,
+        'mail':e.children[2].value
+    })
+    e.children[2].value = e.children[1].value = e.children[0].value = ''
+    toggle('demo_form')
+    return false
+}

@@ -1,105 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ahmed Elswerkey</title>
+    <title>Elswerky</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='icon' href='icon.png'>
     <link rel="stylesheet" href="./index.css">
-    <meta name="title" content="Portfolio">
-    <meta name="description" content="My personal website that shows skills and past projects">
+    <meta name="title" content="Elswerky">
+    <meta name="description" content="Elswerky's personal website that shows skills and past projects">
     <meta name="keywords" content="portfolio,swerky,elswerkey,ahmed elswerky,elswerky,web application">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="author" content="Ahmed Elswerky">
-
-    <style></style> 
 </head>
 <body>
 
     <div id="intro">
         <div id="navbar">
-            <div id="logo"><a href="#">Elswerky</a>
+            <div id="logo"><a href="#">Elswerky</a></div>
+        </div>
+        <div id="port">
+            <img src="./imgs/me.jpg" alt="elswerky photo"/>
+        </div>
+        <div id="content">
+            <div>
+                <p id='infos'>Hi there, <br>I'm Ahmed Elswerky, <br>A web developer <small style="font-family:monospace;">(React JS)</small></p>
+                <div id="skills">
+                    <div class="skilld">HTML</div>
+                    <div class="skilld">CSS</div>
+                    <div class="skilld">Javascript</div>
+                    <div class="skilld">React</div>
+                    <div class="skilld">Firebase</div>
+                </div>
+        
+                <div id='skills_2'>
+                    <div id='front'>Front-End</div>
+                    <div id='back'>Back-End</div>
+                    <div id='PSDCode'>PSD 2 Code</div>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="port">
-        <img src="./imgs/me.jpg" alt="">
-    </div>
-    <div id="content">
-        <div>
-            <p id='infos'>Hi there, <br>I'm Ahmed Elswerkey, <br>A web developer <small style="font-family:monospace;">(React JS)</small></p>
-            <div id="skills">
-                <div class="skilld">HTML</div>
-                <div class="skilld">CSS</div>
-                <div  class="skilld">Javascript</div>
-                <div  class="skilld">React</div>
-                <div  class="skilld">Firebase</div>
-            </div>
-    
-            <div id='skills_2'>
-                <div id='front'>Front-End</div>
-                <div id='back'>Back-End</div>
-                <div id='PSDCode'>PSD 2 Code</div>
-            </div>
-        </div>
-    </div>
-    
-
-</div>
-
-<!--<div id="other_skills">
-            <div class="o_s" title='Perfect-final result'><div>Prefect result</div></div>
-            <div class="o_s" title='Fast learner'><div></div></div>
-            <div class="o_s" title='Goal is for the greater good'><div></div></div>
-            <div class="o_s" title='Flixbility'><div></div></div>
-        </div>-->
-    <!--------------Intro end!---------->
 
     <div id='hire_me'>
-        <!-- Proejcts you requested -->
-        <!-- <img src="imgs/have_an_idea_2.gif" style='width:30%;' alt=""> -->
-       <div>
-        <div style="float:left;width:50%;display:flex;justify-content:center;flex-flow:column;height:100%;">
-            <p>Start building your project now!</p>
-            <button  id='demo_button' onclick="toggle('demo_form')">Hire me</button>
+        <div>
+            <div style="float:left;width:50%;display:flex;justify-content:center;flex-flow:column;height:100%;">
+                <p>Start building your project now!</p>
+                <button  id='demo_button' onclick="toggle('demo_form')">Hire me</button>
+            </div>
+            <div style="float:right;width:50%;display:inline-block;overflow: hidden;">
+                <img src="./imgs/tag.png" style='width:50vw;' alt="code photo">
+            </div>
         </div>
-        <div style="float:right;width:50%;display:inline-block;overflow: hidden;">
-            <img src="./imgs/tag.png" style='width:50vw;' alt="">
-        </div>
-    </div>
         <div id='demo_form' style='display:none'>
             <div>
-                <form style='padding:1.5%' id="demo_div" action='./funcs.php?t=demo-form' method='post'>
-                    <h3>Your idea to real web application</h3>
-               
-                 <fieldset style='border: 1px solid #6471d4;padding: 0.5rem 3.4rem;'>
-                    <legend style='margin:5%;margin-left: -23%;font-size: 1.2rem;color: #6471d4;'>App info</legend>
-                    <select onchange='others(this)' name="type" required>    
-                        <option selected>Select type...</option>
-                        <option value="game">Game</option>
-                        <option value="programe">Programe</option>
-                        <option value="other">Other</option>
-                    </select>
-<br>
-                    <fieldset id='other' style='display:none !important;'>
-                        <legend>Custom app type</legend>
-                        <input type='text' name='other'  placeholder='personal'>
-                    </fieldset>
-<br>
-                    <fieldset>
-                        <legend>App name</legend>
-                        <input type="text" name='app_name' placeholder='Millo' required>
-                    </fieldset>  
-<br>
-                    <fieldset>
-                        <legend>App's descrition</legend>
-                        <textarea name='description' placeholder='It will do this and that..' style="height:5rem;" required></textarea>
-                    </fieldset>
-                </fieldset>
-<br>
-                    <input type="submit" name='submit' value='Done'>
+                <h3>Feel free to contact me</h3>
+                <form style='padding:1.5%' id="demo_div" action='#' onsubmit="sendMessage(this)">
+                    <input type="text" placeholder="Title" required>
+                    <input type="text" placeholder="Message" required>
+                    <input type="email" placeholder="Your mail" required>
+                    <input type="submit" name='submit' value='Send'>
                 </form>
             </div>
         </div>
@@ -109,15 +70,7 @@
         <div id='projects_con'></div>
     </div>
         
-
-    <div id="messages">
-       
-    </div>
-
-    <div id="footer">
-
-    </div>
-     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
     <!-- Hotjar Tracking Code for ahmedemad.net -->
     <script>
@@ -134,9 +87,6 @@
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-firestore.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#config-web-app -->
 
 
     <script>
@@ -156,7 +106,6 @@
 
     <script src="index.js"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145242988-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -165,6 +114,16 @@
 
         gtag('config', 'UA-145242988-1');
     </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FB1R1YJ376"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-FB1R1YJ376');
+</script>
+    <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/6623304.js"></script>
+<!-- End of HubSpot Embed Code -->
 </body>
 </html>
