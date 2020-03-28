@@ -13,6 +13,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="author" content="Ahmed Elswerky">
+    <style id="pseudo-css"></style>
 </head>
 <body>
 
@@ -24,18 +25,23 @@
             <img src="./imgs/me.jpg" alt="elswerky photo"/>
         </div>
         <div id="content">
-            <div>
+            <!-- <div id="light"> -->
+                <!-- <img src="./light.png" alt=""> -->
+            <!-- </div> -->
+            <div id="circles">
                 <p id='infos'>Hi there, <br>I'm Ahmed Elswerky, <br>A web developer <small style="font-family:monospace;">(React JS)</small></p>
                 <div id="skills">
                     <div class="skilld">HTML</div>
                     <div class="skilld">CSS</div>
                     <div class="skilld">Javascript</div>
+                    <div class="skilld">PHP</div>
+                    <div class="skilld">MYSQL</div>
                     <div class="skilld">React</div>
-                    <div class="skilld">Firebase</div>
                 </div>
-        
+                
                 <div id='skills_2'>
                     <div id='front'>Front-End</div>
+                    <div >Firebase</div>
                     <div id='back'>Back-End</div>
                     <div id='PSDCode'>PSD 2 Code</div>
                 </div>
@@ -46,20 +52,21 @@
     <div id='hire_me'>
         <div>
             <div style="float:left;width:50%;display:flex;justify-content:center;flex-flow:column;height:100%;">
-                <p>Start building your project now!</p>
-                <button  id='demo_button' onclick="toggle('demo_form')">Hire me</button>
+                <p>Feel free to contact me !</p>
+                <button  id='demo_button' onclick="toggle('demo_form')">Write a message</button>
             </div>
             <div style="float:right;width:50%;display:inline-block;overflow: hidden;">
                 <img src="./imgs/tag.png" style='width:50vw;' alt="code photo">
             </div>
         </div>
         <div id='demo_form' style='display:none'>
-            <div>
-                <h3>Feel free to contact me</h3>
-                <form style='padding:1.5%' id="demo_div" action='#' onsubmit="sendMessage(this)">
-                    <input type="text" placeholder="Title" required>
-                    <input type="text" placeholder="Message" required>
-                    <input type="email" placeholder="Your mail" required>
+            <div id='demo_contain'>
+                <!-- <h3>Feel free to contact me</h3> -->
+                <form style='width:60%;padding:6rem;' id="demo_div" action='#' onsubmit="sendMessage(this);return false;" method="post">
+                    <input type="text" placeholder="Your Name" name='name' required>
+                    <input type="email" placeholder="Your mail" name='email' required>
+                    <input type="text" placeholder="Title" name='title' required>
+                    <textarea style='margin-bottom:10rem;' type="text" placeholder="Message" required></textarea>
                     <input type="submit" name='submit' value='Send'>
                 </form>
             </div>
@@ -87,6 +94,7 @@
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-functions.js"></script>
 
 
     <script>
@@ -125,5 +133,12 @@
     <!-- Start of HubSpot Embed Code -->
   <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/6623304.js"></script>
 <!-- End of HubSpot Embed Code -->
+  <script>
+    //   document.querySelector('#content').onmouseover = e => {
+    //       document.querySelector('#circles').style.transform = `rotateX(${e.clientX*0.05>15?e.clientX*0.05:-e.clientX*0.05}deg) rotateY(-${e.clientY*0.05>15?e.clientY*0.05:-e.clientY*0.05}deg)`
+    //     //   document.querySelector('#circles').style.transform = `rotateY(${e.clientY * 0.03}deg)`
+    //     //   document.querySelector('#pseudo-css').innerHTML = `.skilld:after{transform:translate(-${e.clientX*0.1}px,-${e.clientY * 0.1}px)}`
+    //   }
+  </script>
 </body>
 </html>

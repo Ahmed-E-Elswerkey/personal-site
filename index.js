@@ -45,20 +45,30 @@ window.onload = function(){
         over_leave("sign_up_b");
     }
     over_leave("demo_button");
-    over_leave("demo_div");
+    over_leave("demo_contain");
     document.body.addEventListener("click",function(){over_leave("body")});
     
     firebase.firestore().collection('projects').get().then(doc=>{
         doc.forEach(d=>{
             console.log('asd')
+            var tags = '',
+            tgs = d.data().tags.split(',')
+            tgs.forEach(e=>{
+                if(e.length>0)
+                    tags+='<span>'+e+'</span>'
+                    console.log(e)
+                    console.log(tags)
+            })
             document.getElementById('projects_con').innerHTML += `\
                 <div class='project' style='background-size:cover;'>\
                     <div><img src='./uploads/${d.id}.jpg' alt='${d.id}'>
                         <p class='info'>${d.data().info}</p>\
                     </div>\
-                    <div class='' style='background-size:cover;'>\
+                    <div  style='background-size:cover;'>\
                         <a href='${d.data().link}'>${d.id}</a>\
-                        <div>${d.data().tags}</div>\
+                        <div>\
+                        <div class='tags'>${tags}</div>\
+                        </div>\
                     </div>\
                 </div>`
         })
@@ -114,7 +124,9 @@ function projects_con(ol){
 
 
 
-function sendMessage(e){
+function sendMessage(e){ 
+    console.log(e.children[2].value,e.children[0].value, e.children[1].value)
+    firebase.functions().httpsCallable('sendMail')({email: e.children[1].value.toLowerCase(), subject: e.children[2].value, text: e.children[3].value+'<br> '+e.children[1].value+'<br> ,'+e.children[0].value})
     firebase.firestore().collection('messages').add({
         'title':e.children[0].value,
         'message':e.children[1].value,

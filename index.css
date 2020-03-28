@@ -56,12 +56,12 @@ input,textarea{
     display:block !important;
     margin:2%;
     font-size:1.2rem;
-    border-radius:0px;
-    border:transparent;
+    border-radius: 13px;
+    border: 3px solid #4d65f7;
     font-family:arial;
-    border-bottom: 1px solid #344050;
+    /* border-bottom: 1px solid #344050; */
     padding:5px;
-    width:95%;
+    width:75%;
     box-shadow:0 0 0.1px 0 #2b2b2b;
 }
 input:focus{
@@ -180,11 +180,27 @@ display:inline-block;
     cursor:pointer;
 } */
 #content{
+    position: relative;
     display: inline-block;
     width: 60%; 
     height:80%;
     float: left;
 }
+#content .skilld{
+    position: relative;
+    overflow: hidden;
+}
+/* #content .skilld:after{
+    content:'';
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:url('./imgs/light.png');
+    background-size:cover;
+    opacity:0.3;
+} */
 #content > div{
     height:100%;
     display: flex;
@@ -402,14 +418,17 @@ display:inline-block;
     z-index: 100000;
 }
 #demo_form div{
-    width:40%;
+    width:60%;
+    height:90%;
     margin:auto;
     border-radius:2px;
     background:white;
     text-align:center;
     text-align:-webkit-center;
     z-index: 50000;
-    padding:4rem;
+    background: url(./mail.png) center center no-repeat;
+    background-size: contain;
+    position: relative;
 }
 #demo_form h3{
     border:1px solid #2b2b2b;
@@ -417,6 +436,13 @@ display:inline-block;
     border-radius:2px;
     margin:0.5rem auto;
     font-size:1.3rem;
+}
+#demo_form div form input[type='submit']{
+    bottom: 15%;
+    width: 34%;
+    left: calc(33% - 1rem);
+    right: calc(33% - 1rem);
+    position: absolute;
 }
 #demo_form div form select{
     border-radius:2px;
@@ -458,6 +484,12 @@ display:inline-block;
     font-family:'bahns','Times New Roman', Times, serif;
 }
 
+.project a{
+    margin:0.25rem auto;
+    display:flex;
+    justify-content: center;
+    font-weight: bold;
+}
 .project p{
     display:none;
     position:absolute;
@@ -476,6 +508,20 @@ display:inline-block;
 }
 .project:hover p{
     display:flex;
+}
+.project .tags{
+    display:flex;
+    flex-flow:row;
+    justify-content: center;
+    line-height: 1rem;
+}
+.project .tags span{
+    padding:0.1rem 0.3rem;
+    margin:0.2rem;
+    background:rgba(0,0,0,0.2);
+    border-radius:6px;
+    font-size:0.74rem;
+    font-weight:500;
 }
 
 #hire_me{
